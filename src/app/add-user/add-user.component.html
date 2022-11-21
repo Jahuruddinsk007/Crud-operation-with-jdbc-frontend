@@ -1,0 +1,26 @@
+<h1 style="text-align: center;" mat-dialog-title>Add User</h1>
+<form (ngSubmit)="onSubmit()">
+    <div mat-dialog-content>
+        <mat-form-field appearance="outline">
+            <mat-label>User Id</mat-label>
+            <input type="number" id="id" [(ngModel)] = "user.id" name="id" matInput placeholder="Enter User Id" required="">
+          </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input type="text" id="fname" [(ngModel)] = "user.fname" name="fname" matInput placeholder="Enter First Name" required="">
+          </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input type="text" id="lname" [(ngModel)] = "user.lname" name="lname" matInput placeholder="Enter Last Name" required="">
+          </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Email Id</mat-label>
+            <input type="email" id="email" [(ngModel)] = "user.email" name="email" matInput placeholder="Enter Email Id" required="">
+          </mat-form-field>
+    </div>
+    <div mat-dialog-actions [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <button type="submit" style="margin-left: 10px;" mat-raised-button color="primary">Add</button>
+    </div>
+</form>
+
